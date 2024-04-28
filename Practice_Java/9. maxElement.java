@@ -5,9 +5,11 @@ import java.util.*;
 class maxElement {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int arr[] = new int[10];
+        System.out.println("Enter length of array-");
+        int l = sc.nextInt();
+        int arr[] = new int[l];
         for (int j = 0; j < arr.length; j++) {
-            System.out.println("Enter an element");
+            System.out.println("Enter elements: ");
             arr[j] = sc.nextInt();
         }
         int max = 0;

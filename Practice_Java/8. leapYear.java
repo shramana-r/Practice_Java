@@ -6,14 +6,20 @@ class leapYear {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the number of days of the year:");
+        System.out.print("Enter the year:");
         int num = sc.nextInt();
-        if (num > 365 && num < 367)
-            System.out.println("Leap year");
-        else if (num == 365)
-            System.out.println("Non-leap year");
+        boolean check = false;
+        if (num % 100 == 0) {
+            if (num % 400 == 0) {
+                check = true;
+            }
+        } else if (num % 4 == 0) {
+            check = true;
+        }
+        if (check == true)
+            System.out.println("Leap Year");
         else
-            System.out.println("Not possible");
+            System.out.println("Not a leap year");
         sc.close();
     }
 }
